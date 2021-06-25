@@ -11,6 +11,7 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import co.metalab.tech.interview.R
+import co.metalab.tech.interview.common.hideKeyboard
 import kotlinx.android.synthetic.main.fragment_list.*
 
 class PokeListFragment : Fragment(R.layout.fragment_list) {
@@ -77,6 +78,7 @@ class PokeListFragment : Fragment(R.layout.fragment_list) {
     }
 
     private fun goToPokeDetail(pokeId: Int) {
+        activity!!.hideKeyboard()
         findNavController().navigate(
             PokeListFragmentDirections
                 .actionPokeListFragmentToPokeDetailFragment(pokeId)
