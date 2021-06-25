@@ -3,6 +3,7 @@ package co.metalab.tech.interview.ui.list
 import android.os.Bundle
 import android.view.View
 import android.widget.SearchView
+import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -41,7 +42,7 @@ class PokeListFragment : Fragment(R.layout.fragment_list) {
         })
 
         viewModel.error().observe(viewLifecycleOwner, Observer { error ->
-            errorLoadingText.isVisible = error
+            errorLoadingText.isInvisible = !error
         })
 
         viewModel.goToPokeDetail().observe(viewLifecycleOwner, Observer { pokeId ->
