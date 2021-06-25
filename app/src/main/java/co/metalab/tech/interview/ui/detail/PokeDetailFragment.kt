@@ -65,9 +65,9 @@ class PokeDetailFragment : Fragment(R.layout.fragment_detail) {
         pokeName.text = details.name
 
         pokeTypesGroup.removeAllViews()
-        details.types.forEach { type ->
+        details.types.sortedBy { it.identifier }.forEach { type ->
             val chip = Chip(context).apply {
-                text = type.identifier
+                text = type.identifier.capitalize()
                 setTextColor(ContextCompat.getColor(context, R.color.white))
                 setChipBackgroundColorResource(type.getColor())
             }
