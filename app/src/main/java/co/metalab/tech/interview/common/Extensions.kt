@@ -10,12 +10,6 @@ import androidx.core.content.ContextCompat
 
 fun Int?.prettyPrintId(): String = "#${String.format("%03d", this)}"
 
-fun String?.bold(start: Int, end: Int): SpannableStringBuilder {
-    val spannableStringBuilder = SpannableStringBuilder(this)
-    spannableStringBuilder.setSpan(StyleSpan(Typeface.BOLD), start, end, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
-    return spannableStringBuilder
-}
-
 fun Activity.hideKeyboard() {
     val view = this.window?.currentFocus
     if (view != null) {

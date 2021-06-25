@@ -10,7 +10,7 @@ object PokemonRepository {
     suspend fun getPokemonList(): Result<List<Pokemon>> = try {
         val pokemon = createPokeService()
             .getAllPokemon()
-            .also { pokemonList -> pokemonList.forEach { pokemon -> pokemonCache[pokemon.id] = pokemon } }
+            .onEach { pokemon -> pokemonCache[pokemon.id] = pokemon }
 
         Result.Success(pokemon)
     } catch (exception: Exception) {
