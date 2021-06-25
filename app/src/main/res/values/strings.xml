@@ -1,0 +1,13 @@
+<resources>
+
+    <string name="app_name">Pokédex</string>
+    <string name="header_evolutions">Evolutions</string>
+    <string name="action_search">Filter pokemon</string>
+    <string name="evolves_from">Evolves from</string>
+    <string name="evolves_into">Evolves into</string>
+    <string name="no_results_found_for_STRING">No results found for \"%s\"</string>
+    <string name="STRING_does_not_evolve">%s does not evolve</string>
+    <string name="error_loading_evolutions">Error loading evolutions</string>
+    <string name="error_loading_pokemon">Failed to load Pokemon.\nTap to try again.</string>
+
+</resources>

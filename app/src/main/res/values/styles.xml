@@ -1,0 +1,61 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/white</item>
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+    <style name="ToolbarTheme" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorHint">@color/whiteAlpha70</item>
+        <item name="colorControlNormal">@color/darkGray</item>
+    </style>
+
+    <style name="ProgressBarTheme">
+        <item name="android:indeterminate">true</item>
+        <item name="android:indeterminateTintMode">src_atop</item>
+        <item name="android:indeterminateTint">@color/colorPrimary</item>
+    </style>
+
+    <style name="ParagraphDarkGray">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/darkGray</item>
+    </style>
+
+    <style name="Headline1DarkGray">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">@color/darkGray</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Headline2DarkGray">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/darkGray</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Headline3DarkGray">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/darkGray</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Headline4DarkGray">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/darkGray</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Headline4MediumGray" parent="Headline4DarkGray">
+        <item name="android:textColor">@color/mediumGray</item>
+    </style>
+
+    <style name="Headline5MediumGray">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/mediumGray</item>
+    </style>
+
+</resources>
