@@ -22,7 +22,8 @@
         tools:layout="@layout/fragment_detail">
         <action
             android:id="@+id/action_pokeDetailFragment_to_pokeDetailFragment"
-            app:destination="@id/pokeDetailFragment" />
+            app:destination="@id/pokeDetailFragment"
+            app:launchSingleTop="true"/>
         <argument
             android:name="pokeId"
             app:argType="integer" />
