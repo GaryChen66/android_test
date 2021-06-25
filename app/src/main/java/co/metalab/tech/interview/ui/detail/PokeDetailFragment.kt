@@ -41,7 +41,6 @@ class PokeDetailFragment : Fragment(R.layout.fragment_detail) {
 
         viewModel.loading().observe(viewLifecycleOwner, Observer { loading ->
             progressBar.isVisible = loading
-            divider.isVisible = !loading
             evolutions.isVisible = !loading
         })
 
