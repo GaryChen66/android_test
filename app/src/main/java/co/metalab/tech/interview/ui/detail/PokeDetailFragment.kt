@@ -57,7 +57,7 @@ class PokeDetailFragment : Fragment(R.layout.fragment_detail) {
             goToPokeDetail(pokeId)
         })
 
-        viewModel.start(args.pokeId, requireContext())
+        viewModel.start(args.pokeId)
     }
 
     private fun bindPokeDetails(details: PokeDetails) {
