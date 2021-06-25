@@ -3,6 +3,7 @@ package co.metalab.tech.interview.ui.detail
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.text.HtmlCompat
 import androidx.recyclerview.widget.RecyclerView
 import co.metalab.tech.interview.R
 import com.bumptech.glide.Glide
@@ -39,7 +40,7 @@ class PokeEvolutionVH(itemView: View) : RecyclerView.ViewHolder(itemView) {
         }
 
         val name = item.name
-        val description = "$name ${item.trigger}"
+        val description = HtmlCompat.fromHtml("<b>$name</b> ${item.trigger}", HtmlCompat.FROM_HTML_MODE_LEGACY)
         evolutionDescription.text = description
 
         Glide.with(this)
