@@ -8,7 +8,7 @@ import android.text.style.StyleSpan
 import android.view.inputmethod.InputMethodManager
 import androidx.core.content.ContextCompat
 
-fun Int?.prettyPrintId(): String = "#${String.format("%02d", this)}"
+fun Int?.prettyPrintId(): String = "#${String.format("%03d", this)}"
 
 fun String?.bold(start: Int, end: Int): SpannableStringBuilder {
     val spannableStringBuilder = SpannableStringBuilder(this)
