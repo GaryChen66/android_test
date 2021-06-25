@@ -1,5 +1,6 @@
 package co.metalab.tech.interview.domain
 
+import androidx.core.text.isDigitsOnly
 import co.metalab.tech.interview.data.Pokemon
 import co.metalab.tech.interview.data.PokemonRepository
 import co.metalab.tech.interview.data.Result
@@ -15,7 +16,7 @@ class GetPokemonList {
         }
 
         if (query != null && query.isNotBlank()) return@withContext pokemonList.filter { pokemon ->
-            pokemon.identifier.contains(query, false)
+            pokemon.identifier.contains(query, false) or (query.isDigitsOnly() && query.toInt() == pokemon.id)
         }.let { list ->
             Result.Success(list)
         }
